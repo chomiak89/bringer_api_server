@@ -8,6 +8,9 @@ const cors = require("cors");
 
 const app = express();
 
+// ℹ️ configure port
+const port = process.env.PORT;
+
 // ℹ️ set up cross origin resource sharing
 app.use(
   cors({
@@ -83,6 +86,6 @@ app.get("/tracking_parcel", async (req, res) => {
 });
 
 //START SERVER
-app.listen(3001, () => {
+app.listen(port, () => {
   console.log("app listening on port 3001");
 });
